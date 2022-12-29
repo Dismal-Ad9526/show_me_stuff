@@ -4,30 +4,31 @@ import pandas as pd
 print(f"\n**************************************************")
 print('**********      "Super Duper Tool!"     **********')
 print('**************************************************')
+print(f"\nThe basic idea of this program is to take a plain text file that has a list, compare it to a CSV file, and show results.")
 
-# RegEx for user responses; you have to define the expected response!
+# RegEx for user responses
 response1 = "(y|Y)"
 response2 = "(n|N)"
 
-# List of endpoints in a text file. This takes advantage of how the CMD prompt will write the
-# full file path and can be located anywhere on your HDD! Just drag and drop...
-prompt1 = f"\nText file of endpoints to convert to CSV [Drag & drop file to terminal and press ENTER]\n"
+# Provide list of hostnames in a plain text file. This takes advantage of how the CMD 
+# prompt will input the literal path and can be located anywhere on your HDD! Just drag and drop...
+prompt1 = f"\nText file of hostnames to convert to CSV [Drag & drop sample text file to terminal and press ENTER]\n"
 prompt1 += f"\n--- Don't forget to [CLICK] back into the terminal window --- \n"
 prompt1 += f"\nFilepath: "
 txt_file_loc = input(str(prompt1))
 
-# List of all devices - can be exported from Cylance console. Just drag and drop...
-prompt2 = f"\nCSV file of all Devices - Export from Cylance Console\n"
+# Master file of all computers to compare against. Just drag and drop!
+prompt2 = f"\nMaster CSV file - drop file directly into terminal!\n"
 prompt2 += f"\n--- Don't forget to [CLICK] back into the terminal window --- \n"
 prompt2 += f"\nFilepath: "
 all_devices_loc = input(str(prompt2))
 
-# Converts text file to CSV for 1-to-1 comparison
+# Converts plain text file to CSV for 1-to-1 comparison
 prompt3 = "\nConvert text file to CSV? [ Y | N ] "
 user_response1 = input(str(prompt3))
 
 # Sit back and relax...
-prompt3 = "\nLet's do some work! [ Y | N ] "
+prompt3 = "\nAre we ready? [ Y | N ] "
 user_response2 = input(str(prompt3))
 
 # Function for converting the text file to CSV
@@ -43,10 +44,13 @@ def convert_txt_to_csv():
 def compare_files():
     df1 = pd.read_csv('output_file_this_can_be_deleted.csv', encoding='cp1252')
     df2 = pd.read_csv(all_devices_loc, encoding='cp1252')
-    df2_picky1 = df2[['Name', 'State', 'Agent Version', 'IP Addresses', 'MAC Addresses', 'OS Version']]
+    df2_picky1 = df2[['Name', 'Status', 'OS Version', 'IP Address', 'MAC Address']]
     df2_picky2 = df2_picky1.reset_index(drop=True)
     merge = pd.merge(df1, df2_picky2, on='Name')
     print(merge)
+    # If you want to output the results as a CSV file instead of outputting to your
+    # screen, comment out line #50 above and remove the comment from line #53.
+    #merge.to_csv("results.csv")
  
 # User response will tell Python what to do
 if(re.search(response1, user_response1)):
@@ -55,6 +59,3 @@ if(re.search(response1, user_response2)):
     compare_files()
 else:
     print("Goodbye!")
-   
-# If you want to export results as an actual CSV...
-# merge.to_csv("results.csv")
