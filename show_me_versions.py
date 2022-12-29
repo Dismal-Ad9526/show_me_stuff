@@ -2,7 +2,7 @@ import re # RegEx
 import pandas as pd
 
 print(f"\n**************************************************")
-print('**********        CylancePROTECT        **********')
+print('**********      "Super Duper Tool!"     **********')
 print('**************************************************')
 
 # RegEx for user responses; you have to define the expected response!
