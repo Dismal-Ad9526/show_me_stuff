@@ -52,6 +52,9 @@ def compare_files():
 if(re.search(response1, user_response1)):
       convert_txt_to_csv()
 if(re.search(response1, user_response2)):
+    compare_files()
+else:
+    print("Goodbye!")
    
 # If you want to export results as an actual CSV...
 # merge.to_csv("results.csv")
