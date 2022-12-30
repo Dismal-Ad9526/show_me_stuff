@@ -11,7 +11,7 @@ response1 = "(y|Y)"
 response2 = "(n|N)"
 
 # Provide list of workstations. This takes advantage of how the terminal/shell 
-# will input the literal path to the file and can be located anywhere on your HDD! Just drag and drop...
+# will input the literal path to the file and can be located anywhere on your HDD! Just drag and drop!
 prompt1 = f"\nSample text file of hostnames to convert to CSV [Drag & drop file to terminal and press ENTER]\n"
 prompt1 += f"\n--- Don't forget to [CLICK] back into the terminal window --- \n"
 prompt1 += f"\nFilepath: "
@@ -51,7 +51,7 @@ def compare_files():
     # If you want to output the results as a CSV file instead of outputting to your
     # screen, comment out line 50 above and uncomment line 53.
     #merge.to_csv("results.csv")
- 
+
 # User response will tell Python what to do
 if(re.search(response1, user_response1)):
       convert_txt_to_csv()
