@@ -18,7 +18,7 @@ The basic idea of this program is to take a plain text file that has a list, com
 **Hypothetical Scenario**
 
 
-You need to find out what workstations are either online or offline, see what IP address it has, it's MAC address, what OS it has, etc. The only information you've been given is a list of twenty random workstations (i.e., `sample_text_file.txt`). You can export a report of all workstations you have in your domain (i.e., `sample_csv_master_file.csv`), but there's a thousand workstations to go through. You **_could_** filter out the report by each individual workstation or CTRL+F your way through it, but ain't nobody got time for that! 
+You need to find out what workstations are either online or offline, see what IP address it has, it's MAC address, what OS it has, etc. The only information you've been given is a list of twenty random workstations (i.e., `sample_text_file.txt`). You can export a report of all workstations you have in your domain (i.e., `sample_csv_master_file.csv` - to download: open the RAW file > then right-click on the page > Save as...), but there's a thousand workstations to go through. You **_could_** filter out the report by each individual workstation or CTRL+F your way through it, but ain't nobody got time for that! 
 
 
 **How to Use this Program**
