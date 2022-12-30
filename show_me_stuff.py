@@ -10,15 +10,15 @@ print(f"\nThe basic idea of this program is to take a plain text file that has a
 response1 = "(y|Y)"
 response2 = "(n|N)"
 
-# Provide list of workstations in a plain text file. This takes advantage of how the terminal/shell 
-# will input the literal path and the file can be located anywhere on your HDD! Just drag and drop...
+# Provide list of workstations. This takes advantage of how the terminal/shell 
+# will input the literal path to the file and can be located anywhere on your HDD! Just drag and drop...
 prompt1 = f"\nSample text file of hostnames to convert to CSV [Drag & drop file to terminal and press ENTER]\n"
 prompt1 += f"\n--- Don't forget to [CLICK] back into the terminal window --- \n"
 prompt1 += f"\nFilepath: "
 txt_file_loc = input(str(prompt1))
 
 # Master CSV file of all workstations to compare against. Just drag and drop!
-prompt2 = f"\nMaster CSV file - drop file directly into terminal!\n"
+prompt2 = f"\nSample Master CSV file - drop file directly into terminal!\n"
 prompt2 += f"\n--- Don't forget to [CLICK] back into the terminal window --- \n"
 prompt2 += f"\nFilepath: "
 all_devices_loc = input(str(prompt2))
@@ -49,7 +49,7 @@ def compare_files():
     merge = pd.merge(df1, df2_stuff2, on='Name')
     print(merge)
     # If you want to output the results as a CSV file instead of outputting to your
-    # screen, comment out line 50 above and remove the comment from line 53.
+    # screen, comment out line 50 above and uncomment line 53.
     #merge.to_csv("results.csv")
  
 # User response will tell Python what to do
