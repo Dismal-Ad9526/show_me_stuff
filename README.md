@@ -11,6 +11,10 @@ The basic idea of this program is to take a plain text file that has a list, com
 2. Install [Pandas](https://pandas.pydata.org/docs/getting_started/index.html#getting-started) python library with `pip install pandas`
 
 
+**`This works with Python 3.11.`**
+
+
+
 **Hypothetical Scenario**
 
 
