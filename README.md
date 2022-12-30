@@ -35,7 +35,7 @@ Sample files are in the repository that'll help show how this python program wor
 
 5. Last chance - if you're ready, type `y` or `Y`, and press `Enter`.
 
-6. Results will be printed on-screen in seconds! Time for that hour-long coffee break!
+6. Results will be printed on-screen in seconds! Time for an hour-long coffee break!
 
 
 
