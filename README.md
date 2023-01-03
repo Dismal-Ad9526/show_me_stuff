@@ -41,6 +41,7 @@ Sample files are in the repository that'll help show how this python program wor
 
 6. Results will be printed on-screen in seconds! You deserve an hour-long coffee break!
 
+*** **_Technically speaking, Python doesn't "compare" objects/values but will "merge" like-values and if they match, output the results._** ***
 
 
 You could also save the results in a CSV - just comment out line 50 and uncomment line 53. It will save the results to wherever you ran the program from. 
